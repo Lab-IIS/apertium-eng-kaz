@@ -1,0 +1,6 @@
+
+  
+    lt-proc -w '/home/aida/apertium-testing/apertium-eng-kaz/eng-kaz.automorf.bin' | cg-proc -w '/home/aida/apertium-testing/apertium-eng-kaz/eng-kaz.rlx.bin' | apertium-tagger -g $2 '/home/aida/apertium-testing/apertium-eng-kaz/eng-kaz.prob' | apertium-pretransfer| lt-proc -b '/home/aida/apertium-testing/apertium-eng-kaz/eng-kaz.autobil.bin' | lrx-proc '/home/aida/apertium-testing/apertium-eng-kaz/eng-kaz.lrx.bin' | apertium-transfer -t -b '/home/aida/apertium-testing/apertium-eng-kaz/apertium-eng-kaz.eng-kaz.t1x'  '/home/aida/apertium-testing/apertium-eng-kaz/eng-kaz.t1x.bin' 
+  
+
+  
