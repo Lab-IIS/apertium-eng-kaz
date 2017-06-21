@@ -169,24 +169,24 @@ distuninstallcheck_listfiles = find . -type f -print
 am__distuninstallcheck_listfiles = $(distuninstallcheck_listfiles) \
   | sed 's|^\./|$(prefix)/|' | grep -v '$(infodir)/dir$$'
 distcleancheck_listfiles = find . -type f -print
-ACLOCAL = ${SHELL} /home/aida/apertium-testing/apertium-eng-kaz/missing aclocal-1.15
+ACLOCAL = ${SHELL} /home/aida/git/apertium-eng-kaz/missing aclocal-1.15
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 1
 APERTIUM_CFLAGS = -I/usr/include/apertium-3.4 -I/usr/lib/x86_64-linux-gnu/apertium-3.4/include -I/usr/include/lttoolbox-3.3 -I/usr/lib/x86_64-linux-gnu/lttoolbox-3.3/include -I/usr/include/libxml2
 APERTIUM_KAZ_CFLAGS = 
 APERTIUM_KAZ_LIBS = 
 APERTIUM_LIBS = -lapertium3 -llttoolbox3 -lxml2 -lpcre
-AP_LIB2 = /home/aida/apertium-testing/apertium-kaz
-AP_SRC2 = /home/aida/apertium-testing/apertium-kaz
-AP_SUBDIRS =  /home/aida/apertium-testing/apertium-kaz
-AUTOCONF = ${SHELL} /home/aida/apertium-testing/apertium-eng-kaz/missing autoconf
-AUTOHEADER = ${SHELL} /home/aida/apertium-testing/apertium-eng-kaz/missing autoheader
-AUTOMAKE = ${SHELL} /home/aida/apertium-testing/apertium-eng-kaz/missing automake-1.15
+AP_LIB2 = 
+AP_SRC2 = /tmp/test/share/apertium/apertium-kaz
+AP_SUBDIRS = 
+AUTOCONF = ${SHELL} /home/aida/git/apertium-eng-kaz/missing autoconf
+AUTOHEADER = ${SHELL} /home/aida/git/apertium-eng-kaz/missing autoheader
+AUTOMAKE = ${SHELL} /home/aida/git/apertium-eng-kaz/missing automake-1.15
 AWK = gawk
 CGCOMP = /usr/bin/cg-comp
 CGPROC = /usr/bin/cg-proc
 CYGPATH_W = echo
-DEFS = -DPACKAGE_NAME=\"apertium-eng-kaz\" -DPACKAGE_TARNAME=\"apertium-eng-kaz\" -DPACKAGE_VERSION=\"0.1.0\" -DPACKAGE_STRING=\"apertium-eng-kaz\ 0.1.0\" -DPACKAGE_BUGREPORT=\"unknown@users.sourceforge.net\" -DPACKAGE_URL=\"\"
+DEFS = -DPACKAGE_NAME=\"apertium-eng-kaz\" -DPACKAGE_TARNAME=\"apertium-eng-kaz\" -DPACKAGE_VERSION=\"1.0.0\" -DPACKAGE_STRING=\"apertium-eng-kaz\ 1.0.0\" -DPACKAGE_BUGREPORT=\"unknown@users.sourceforge.net\" -DPACKAGE_URL=\"\"
 ECHO_C = 
 ECHO_N = -n
 ECHO_T = 
@@ -204,28 +204,28 @@ LN_S = ln -s
 LRXCOMP = /usr/bin/lrx-comp
 LRXPROC = /usr/bin/lrx-proc
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /home/aida/apertium-testing/apertium-eng-kaz/missing makeinfo
+MAKEINFO = ${SHELL} /home/aida/git/apertium-eng-kaz/missing makeinfo
 MKDIR_P = /bin/mkdir -p
 PACKAGE = apertium-eng-kaz
 PACKAGE_BUGREPORT = unknown@users.sourceforge.net
 PACKAGE_NAME = apertium-eng-kaz
-PACKAGE_STRING = apertium-eng-kaz 0.1.0
+PACKAGE_STRING = apertium-eng-kaz 1.0.0
 PACKAGE_TARNAME = apertium-eng-kaz
 PACKAGE_URL = 
-PACKAGE_VERSION = 0.1.0
+PACKAGE_VERSION = 1.0.0
 PATH_SEPARATOR = :
 PKG_CONFIG = /usr/bin/pkg-config
 PKG_CONFIG_LIBDIR = 
-PKG_CONFIG_PATH = /usr/local/lib/pkgconfig:/usr/local/share/pkgconfig:/usr/local/lib/pkgconfig
+PKG_CONFIG_PATH = /tmp/test/apertium-kaz-1.0.0:/usr/local/share/pkgconfig:/usr/local/lib/pkgconfig
 SET_MAKE = 
 SHELL = /bin/bash
 STRIP = 
-VERSION = 0.1.0
+VERSION = 1.0.0
 ZCAT = zcat
-abs_builddir = /home/aida/apertium-testing/apertium-eng-kaz
-abs_srcdir = /home/aida/apertium-testing/apertium-eng-kaz
-abs_top_builddir = /home/aida/apertium-testing/apertium-eng-kaz
-abs_top_srcdir = /home/aida/apertium-testing/apertium-eng-kaz
+abs_builddir = /home/aida/git/apertium-eng-kaz
+abs_srcdir = /home/aida/git/apertium-eng-kaz
+abs_top_builddir = /home/aida/git/apertium-eng-kaz
+abs_top_srcdir = /home/aida/git/apertium-eng-kaz
 am__leading_dot = .
 am__tar = $${TAR-tar} chof - "$$tardir"
 am__untar = $${TAR-tar} xf -
@@ -241,7 +241,7 @@ host_alias =
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/aida/apertium-testing/apertium-eng-kaz/install-sh
+install_sh = ${SHELL} /home/aida/git/apertium-eng-kaz/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -283,8 +283,13 @@ TARGETS_COMMON = \
 ###############################################################################
 ###############################################################################
 EXTRA_DIST = $(PREFIX1).prob $(PREFIX2).prob \
+	   $(BASENAME).$(PREFIX1).dix \
+           $(BASENAME).$(PREFIX1).rlx \
+           $(BASENAME).$(PREFIX1).lrx \
+           $(BASENAME).$(LANG1).dix $(BASENAME).$(LANG1).acx \
            $(BASENAME).$(PREFIX1).t1x $(BASENAME).$(PREFIX1).t2x $(BASENAME).$(PREFIX1).t3x \
 	   $(BASENAME).$(PREFIX1).t4x \
+           $(BASENAME).$(PREFIX2).lrx \
 	   $(BASENAME).$(PREFIX2).t1x $(BASENAME).$(PREFIX2).t2x $(BASENAME).$(PREFIX2).t3x \
            modes.xml
 

@@ -23,7 +23,10 @@ You will need the following software installed:
 * vislcg3 (>= 0.9.7.5129)
 * hfst (>= svn revision 3600)
 
-* apertium-kaz
+* apertium-kaz(revision 79320)
+  SET environment for apertium-kaz package
+export PKG_CONFIG_PATH=/FOLDER/apertium-kaz-1.0.0
+
 
 If this does not make any sense, we recommend you look at: www.apertium.org
 
